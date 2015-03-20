@@ -1,0 +1,36 @@
+#container img{
+-moz-border-radius: 3px; /* For Firefox */
+-ms-border-radius: 3px; /* For IE */
+-o-border-radius: 3px; /* For Opera */
+-webkit-border-radius: 3px; /* For Safari and Chrome */
+border-radius: 3px;
+
+-moz-box-shadow: 5px 6px 10px 0px rgba(0, 0, 0, .3); /* For Firefox */
+-ms-box-shadow: 5px 6px 10px 0px rgba(0, 0, 0, .3); /* For IE */
+-o-box-shadow: 5px 6px 10px 0px rgba(0, 0, 0, .3); /* For Opera */
+-webkit-box-shadow: 5px 6px 10px 0px rgba(0, 0, 0, .3); /* For Safari and Chrome */
+box-shadow: 5px 6px 10px 0px rgba(0, 0, 0, .3);
+margin-left: 5%;
+margin-top: 50px;
+width: 42.5%;
+}
+
+#container p{
+font-size: 1.5em;
+margin-left: 25%;
+margin-right: 25%;
+}
+#container h2{
+padding-top: 50px;
+font-size: 2em;
+margin-left: 25%;
+margin-right: 25%;
+}
+
+#logo p{
+font-family:  Berlin Sans FB, Arial, serif;
+margin-top: 40px;
+padding-left: 7%;
+padding-right: 5%;
+font-size: 3.2em;
+}
