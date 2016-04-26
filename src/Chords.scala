@@ -10,8 +10,10 @@ abstract class Chord {
 	
 	//TODO: Implement fretBoard() 
 	def fretBoard(): String = {
-		//toString+"; Fret range ["+lowestFret+", "+highestFret+"]" + "\n" +
-		(for(i <- 0 to (highestFret-1)) yield {for(j <- 0 to (tuning.size-1)) yield {if(grip(j)==i) " *" else " |"} +i}).toString
+		toString+"; Fret range ["+lowestFret+", "+highestFret+"]" + "\n" +
+		(for(i <- 0 to (highestFret-1)) 
+		  yield {for(j <- 0 to (tuning.size-1)) 
+		    yield {if(grip(j)==i && i != 0) " *" else if(grip(j)==i) "_*" else if(i==0) "_ " else " |"}}.mkString).mkString("\n")
 	}
 }
 
@@ -31,4 +33,11 @@ object Notes {
 	private val notes = Array[String]("A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#")
 	def fromNumberToName(i: Int): String = {notes(i%12)}
 	def fromNameToNumber(note: String): Int = {notes.indexWhere(note == _)}
+}
+
+object main {
+  def main(args: Array[String]): Unit = {
+    val gc = new GuitarChord("G", Array[Int](0,5,5,4,3,3))
+    println(gc.fretBoard)
+  }
 }
